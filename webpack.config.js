@@ -22,13 +22,16 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             esModule: false,
-                            name (file) {
+                            name(file) {
                                 return '[path][name].[ext]'
                             },
-                            publicPath: function(url) {
+                            publicPath: function (url) {
                                 return url.replace('../', '/assets/')
                             }
                         }
+                    },
+                    {
+                        loader: 'image-webpack-loader'
                     }
                 ]
             }
